@@ -20,8 +20,7 @@ void merge(int a[],int mid ,int low,int high){
         
             b[k]=a[i];
         k++;
-        i++;
-        
+        i++;   
     }
     while(j<=high){
         b[k]=a[j];
@@ -38,7 +37,6 @@ void mergesort(int a[],int low,int high){
         mergesort(a,low,mid);
         mergesort(a,mid+1,high);
         merge(a,mid,low,high);
-
     }
 }
 int main(){
@@ -50,17 +48,11 @@ int main(){
     for(int i=0;i<n;i++){
         printf("Enter a[%d] element: ",i);
         scanf("%d",&a[i]);
-
     }
     printf("ARRAY AFTER MERGE SORT: \n\n");
     mergesort(a,low,high);
     for(int i=0;i<n;i++){
         printf("%d ",a[i]);
-    
-
-    }
-
-
-          
+    }          
  return 0;
 }
